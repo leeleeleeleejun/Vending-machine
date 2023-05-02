@@ -1,6 +1,6 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: #EAE8FE;
+  background-color: #eae8fe;
   line-height: 1;
 }
 
@@ -19,13 +19,17 @@ button {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
+li {
+  list-style: none;
+}
+
 .logo {
   top: 0;
   width: 100%;
   max-width: 386px;
   height: 180px;
   background: no-repeat center / 100% 100% url(./img/logo.png);
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 section {
@@ -39,10 +43,11 @@ section {
 
 .vending-machine-ui {
   width: 360px;
-  height: 650px;
+  height: 730px;
   background-color: #ffffff;
   box-sizing: border-box;
   padding: 31px 27px 28px;
+  margin-bottom: 10px;
 }
 
 .menu-list {
@@ -52,7 +57,7 @@ section {
   flex-wrap: wrap;
   overflow: auto;
   justify-content: space-between;
-  background-color: #EAE8FE;
+  background-color: #eae8fe;
   padding: 3px;
 }
 
@@ -63,16 +68,17 @@ section {
   cursor: move;
 }
 
-.menu-list li:nth-child(3)~li {
+.menu-list li:nth-child(3) ~ li {
   margin-top: 12px;
 }
 
-.menu-list-item:active, .shiftKey {
-  border: 3px solid #6327FE !important;
+.menu-list-item:active,
+.shiftKey {
+  border: 3px solid #6327fe !important;
 }
 
 .sold-out::before {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 10px;
   width: 84.95px;
@@ -114,7 +120,7 @@ section {
   display: inline-block;
   font-size: 12px;
   padding: 5px 15px;
-  background-color: #6327FE;  
+  background-color: #6327fe;
   border-radius: 50px;
   color: #ffffff;
 }
@@ -122,6 +128,7 @@ section {
 .vending-machine-effect {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 12px;
 }
 
@@ -132,13 +139,13 @@ section {
   border-radius: 5px;
 }
 
-.effect-button:active{
+.effect-button:active {
   box-shadow: none;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-button[class$="pull-button"] {
+button[class$='pull-button'] {
   width: 45%;
   padding: 6px 4px;
 }
@@ -160,25 +167,27 @@ button[class$="pull-button"] {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  font-size: 14px;  
+  font-size: 14px;
   line-height: 20px;
-  background-color: #EAE8FE;
+  background-color: #eae8fe;
 }
 
-.vending-machine-input-money, .change-coin {
-  border: 1px solid #BDBDBD;
+.vending-machine-input-money,
+.change-coin {
+  border: 1px solid #bdbdbd;
   box-sizing: border-box;
   line-height: 18px;
 }
 
-.get-item-list, .my-cola-list {
+.get-item-list,
+.my-cola-list {
   display: flex;
   flex-direction: column;
   overflow: auto;
   height: 106px;
   padding: 12px;
-  border: 1px solid #BDBDBD;
-  background-color: #EAE8FE;
+  border: 1px solid #bdbdbd;
+  background-color: #eae8fe;
 }
 
 .get-item {
@@ -211,14 +220,16 @@ button[class$="pull-button"] {
   font-weight: 500;
 }
 
-.get-item span, .get-item button, .get-item input {
+.get-item span,
+.get-item button,
+.get-item input {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 30px;
   font-size: 14px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: none;
@@ -229,17 +240,19 @@ button[class$="pull-button"] {
 }
 
 .get-button {
-  color: #FFFFFF;
-  background: #6327FE;
+  color: #ffffff;
+  background: #6327fe;
+  height: 110px;
 }
 
-#my-money, #my-coin {
+#my-money,
+#my-coin {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  font-size: 14px;  
+  font-size: 14px;
   line-height: 20px;
-  background-color: #EAE8FE;
+  background-color: #eae8fe;
   margin-top: -22px;
   padding: 6px 10px;
   border-radius: 5px;
@@ -250,7 +263,8 @@ button[class$="pull-button"] {
   margin-top: 10px;
 }
 
-#my-money > span, #my-coin > span {
+#my-money > span,
+#my-coin > span {
   font-weight: 700;
 }
 
@@ -258,7 +272,7 @@ button[class$="pull-button"] {
   margin-top: 9px;
   height: 20px;
   width: 360px;
-  background-color: #EAE8FE;
+  background-color: #eae8fe;
   margin-left: -27px;
   overflow: visible;
 }
@@ -267,12 +281,14 @@ button[class$="pull-button"] {
   margin-top: 25px;
 }
 
-.my-cola-list { /*.get-item를 같이 사용하며 일부 변경이 필요한 부분만 따로 선언 */
+.my-cola-list {
+  /*.get-item를 같이 사용하며 일부 변경이 필요한 부분만 따로 선언 */
   border-radius: 5px;
-  height: 330px;
+  height: 370px;
 }
 
-.total,.basket-total {
+.total,
+.basket-total {
   display: block;
   text-align: right;
   font-size: 12px;
@@ -312,7 +328,9 @@ button[class$="pull-button"] {
   border-radius: 5px;
 }
 
-.dropdown { display: inline-block; }
+.dropdown {
+  display: inline-block;
+}
 
 .dropdown-content {
   font-size: 13px;
@@ -322,7 +340,7 @@ button[class$="pull-button"] {
   background-color: #ffffff;
   margin-top: 0;
   padding: 0;
-  border: 1px solid rgba(155,155,155,0.15);
+  border: 1px solid rgba(155, 155, 155, 0.15);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   z-index: 99999999999;
   transition: all 0.3s;
@@ -340,5 +358,5 @@ button[class$="pull-button"] {
   height: 36px;
   width: 100px;
   box-shadow: none;
-  border-bottom: 1px solid rgba(155,155,155,0.15);
+  border-bottom: 1px solid rgba(155, 155, 155, 0.15);
 }
