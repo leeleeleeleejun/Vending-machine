@@ -19,10 +19,6 @@ button {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-li {
-  list-style: none;
-}
-
 .logo {
   top: 0;
   width: 100%;
@@ -43,11 +39,12 @@ section {
 
 .vending-machine-ui {
   width: 360px;
-  height: 730px;
+  height: 670px;
   background-color: #ffffff;
   box-sizing: border-box;
   padding: 31px 27px 28px;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .menu-list {
